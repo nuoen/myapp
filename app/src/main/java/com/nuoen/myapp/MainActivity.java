@@ -7,11 +7,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.nuoen.myapp.activity.BaseActivity;
 import com.nuoen.myapp.activity.LoginActivity;
 import com.nuoen.myapp.activity.RegisterActivity;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     private Button login_btn;
     private Button register_btn;
 
@@ -25,15 +26,17 @@ public class MainActivity extends AppCompatActivity {
         login_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in=new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(in);
+                //Intent in=new Intent(MainActivity.this, LoginActivity.class);
+                //startActivity(in);
+                navigateTo(LoginActivity.class);
             }
         });
         register_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in=new Intent(MainActivity.this, RegisterActivity.class);
-                startActivity(in);
+                //Intent in=new Intent(MainActivity.this, RegisterActivity.class);
+                //startActivity(in);
+                navigateTo(RegisterActivity.class);
             }
         });
 
